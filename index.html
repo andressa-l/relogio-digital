@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/image/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/image/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/image/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/global.css" />
-    <title>Relogio Digital</title>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Clock Dark/Light</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/variables.css">
 
-  </head>
-  <body>
-    <div id="relogio" class="container">
-      
-      <div class="text">
-        <span id="horas">00</span>
-        <span class="tempo">Horas</span>
-      </div>
-  
-      <div class="text">
-        <span id="minutos">00</span>
-        <span class="tempo">Minutos</span>
-      </div>
-  
-      <div class="text">
-        <span id="segundos">00</span>
-        <span class="tempo">Segundos</span>
-      </div>
+</head>
+<body>
 
+<section>
+
+  <div class="container">
+    <div class="icons">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
     </div>
-    
-    <script src="./assets/js/script.js"></script>
-  </body>
+    <div class="time">
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num hour_num">08</span>
+          <span class="text">Hours</span>
+        </div>
+        <span class="colon">:</span>
+      </div>
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num min_num">45</span>
+          <span class="text">Minutes</span>
+        </div>
+        <span class="colon">:</span>
+      </div>
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num sec_num">06</span>
+          <span class="text">Seconds</span>
+        </div>
+        <span class="am_pm">AM</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <script  src="/assets/js/script.js"></script>
+
+</body>
 </html>

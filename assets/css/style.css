@@ -1,63 +1,112 @@
-body {
-    height: 100vh;
-    /* width: 100vw; */
-    background: rgb(2,0,36) no-repeat;
-    background: linear-gradient(90deg, rgb(76, 70, 206) 0%, rgb(202, 95, 183) 35%, rgb(114, 212, 231) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Google fonts import link */
+
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  padding: 0 20px;
 }
-
-
-#relogio {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* padding: 20px; */
-    height: 12.5rem;
-    width: 34.375rem;
-    border-radius: 10px;
-    background: transparent;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+section.dark{
+  background: var(--neutral-medium);
 }
-
-#relogio div {
-    height: 10.625rem;
-    width: 9.375rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(52, 54, 59, 0.9);
-    color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    border-radius: 7px;
-    letter-spacing: 3px;
+section .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  max-width: 560px;
+  width: 100%;
+  background: var(--primary-light);
+  box-shadow: 0 5px 10px var(--neutral-dark);
+  border-radius: 12px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
-
-#relogio span {
-    font-weight: bolder;
-    font-size: 60px;
+section.dark .container{
+  background: var(--neutral-soft);
 }
-
-#relogio .tempo {
-    font-size: 20px;
+section .container .icons i{
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  height: 30px;
+  width: 30px;
+  background: var(--neutral-medium);
+  color: var(--primary-light);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
 }
-
-#relogio .text {
-    opacity: 3;
+section.dark .container .icons i{
+  background: var(--primary-light);
+  color: var(--neutral-soft);
 }
-
-@media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
-    }
-  }
-
+.container .icons i.fa-sun{
+  opacity: 0;
+  pointer-events: none;
+}
+section.dark .container .icons i.fa-sun{
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 16px;
+}
+section .container .time{
+  display: flex;
+  align-items: center;
+}
+.container .time .time-colon{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.time .time-colon .am_pm{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+section.dark .time .time-colon .am_pm{
+  color: var(--primary-light);
+}
+.time .time-colon .time-text{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--primary-soft);
+  border-radius: 6px;
+  box-shadow: 0 5px 10px var(--neutral-dark);
+}
+section.dark .time .time-colon .time-text{
+  background: var(--neutral-medium);
+}
+.time .time-colon .time-text,
+.time .time-colon .colon{
+  font-size: 35px;
+  font-weight: 600;
+}
+section.dark .time .time-text .num,
+section.dark .time .colon{
+  color: var(--primary-light);
+}
+.time .time-colon .colon{
+  font-size: 40px;
+  margin: 0 10px;
+}
+.time .time-colon .time-text .text{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+section.dark  .time .time-colon .text{
+  color: var(--primary-light);
+}
